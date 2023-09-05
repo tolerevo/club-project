@@ -132,10 +132,10 @@ table {
 
 /* Universal variables */
 
-:root{
---secondary-color: hsla(229, 27%, 60%, 1);
---main-white: hsla(17, 41%, 97%, 0.8);
---main-blue: hsla(204, 89%, 82%, 1);
+:root {
+  --secondary-color: hsla(229, 27%, 60%, 1);
+  --main-white: hsla(17, 41%, 97%, 0.8);
+  --main-blue: hsla(204, 89%, 82%, 1);
 }
 
 html {
@@ -162,7 +162,7 @@ hr {
   position: fixed;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content:right;
+  justify-content: right;
   width: 100%;
   z-index: 1;
   min-height: 2rem;
@@ -171,13 +171,13 @@ hr {
   border: 2px solid rgb(30, 200, 194);
 }
 
-ul.navbar{
+ul.navbar {
   list-style: none;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content:end;
+  justify-content: end;
   margin: 0 auto;
   padding-right: 1em;
 }
@@ -198,7 +198,7 @@ a.body {
 li a:link,
 a.body:link {
   transition-property: color;
-  color:rgb(153, 36, 164);
+  color: rgb(153, 36, 164);
 }
 
 li a:visited,
@@ -258,19 +258,20 @@ section.banner {
   position: static;
   min-height: fit-content;
   display: flex;
-  flex-flow: row wrap;  
+  flex-flow: row wrap;
   align-content: center;
   justify-items: stretch;
   justify-content: center;
-  margin-top: 14rem;;
+  margin-top: 14rem;
+  ;
   overflow: scroll;
   width: auto;
-  background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%) ;
+  background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%);
   border: 2px solid var(--main-blue, blue);
   padding: 0.2vh;
 }
 
-aside.join{
+aside.join {
   display: block;
   position: relative;
   margin-top: 6em;
@@ -278,7 +279,7 @@ aside.join{
 
 aside.join h2.join {
   font-family:
-  'Roboto', sans-serif;
+    'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: 450;
   font-style: italic;
@@ -291,7 +292,7 @@ aside.join h2.join {
 aside.join p,
 blockquote p.testimonial {
   font-family:
-  'Montserrat', sans-serif, monospace;
+    'Montserrat', sans-serif, monospace;
   font-size: 1rem;
   font-weight: 250;
   font-style: normal;
@@ -303,14 +304,35 @@ blockquote p.testimonial {
   font-weight: 400;
   position: relative;
   display: inline-block;
-  color: rgb(238, 241, 243); 
+  color: rgb(238, 241, 243);
 }
 
 a#inner.body {
   text-decoration: underline;
 }
 
-section.images{
+/* Gallery */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  margin: 20px;
+}
+
+.gallery-item .thumbnail {
+  width: 15rem;
+  border: 2px solid GhostWhite;
+  border-radius: 15px;
+  aspect-ratio: 35/30;
+}
+
+
+section.images {
   display: inline-flex;
   position: relative;
   width: fit-content;
@@ -319,37 +341,13 @@ section.images{
   margin-top: 2rem;
 }
 
-div.gallery{
-  display: inline-flex;
-  position: relative;
-  flex-flow: row nowrap;
-  align-content: stretch;
-  align-items: stretch;
-  width:fit-content;
-  padding: 0;
-  justify-content: space-evenly;
-}
-
-div.gallery img{
-  height: auto;
-  width: 30%;
-  display: flex;
-  position: static;
-  object-fit: cover;
-  border-radius: 20px;
-  padding: 1.3vh;
-  aspect-ratio: 40/32;
-  flex: 1 2 30%;
-  align-self: stretch;
-
-}
-
 div.wrapper {
   width: 100%;
   height: auto;
   display: block;
   position: static;
-  margin: 0px;;
+  margin: 0px;
+  ;
 }
 
 #footer-first {
@@ -368,31 +366,31 @@ div.wrapper {
 div.wrapper-end {
   min-height: fit-content;
   display: flex;
-  flex-flow: row wrap;  
+  flex-flow: row wrap;
   height: 100vh;
   position: relative;
   align-content: center;
   justify-items: stretch;
-  justify-content: start;
+  justify-content: space-evenly;
   margin-top: 0rem;
   margin-right: -1rem;
   overflow: scroll;
   width: auto;
-  background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%) ;
+  background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%);
   border: 2px solid var(--main-blue, blue);
   padding: 0.2vh;
 }
 
 footer#end {
   display: inline-flex;
-  position:static;
+  position: static;
   bottom: -1rem;
   margin-top: 0;
   left: 0;
   flex-flow: row wrap;
   margin-left: -0.1vw;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   width: 100vw;
   z-index: 1;
   min-height: 2rem;
@@ -401,7 +399,7 @@ footer#end {
   background-color: var(--secondary-color);
 }
 
-h3.farewell{
+h3.farewell {
   font-family: 'Montserrat', sans-serif, monospace;
   font-size: 1.5em;
   display: inline;
@@ -419,9 +417,43 @@ h3.farewell{
   text-transform: capitalize;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 600px){
-  footer {
-    flex-direction: column;
+@media only screen and (max-width: 480px) {
+  section.banner h1.intro {
+    width: 100%;
+    line-height: 0.8;
+    font-size: 1em;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0.5em;
+    font-weight: 800;
     text-align: center;
+    display: inline;
   }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px),
+(orientation: portrait) {
+  .gallery-item .thumbnail {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-resolution: 150dpi) and (max-width: 480px) {
+  p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .intro,
+  p {
+    float: left;
+    width: 20em;
+  }
+
+  p {
+    text-align: left;
+  }
+
 }
