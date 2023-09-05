@@ -419,7 +419,7 @@ h3.farewell{
   text-transform: capitalize;
 }
 
-@media (max-width: 28.75em) {
+@media only screen and (min-width: 480px) and (max-width: 600px){
   footer {
     flex-direction: column;
     text-align: center;
