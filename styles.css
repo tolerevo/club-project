@@ -144,10 +144,17 @@ html {
 
 body {
   font-size: 22px;
+  background-image: linear-gradient(62deg, #294662 0%, #382a46 100%);
 }
 
 hr {
   border: 0.3vh solid chocolate;
+}
+
+#top-menu {
+  display: block;
+  z-index: 2;
+  position: fixed;
 }
 
 #navbar {
@@ -216,18 +223,17 @@ a.body:active {
 }
 
 main {
-  position: relative;
-  display: block;
+  position: static;
+  display: inline;
   flex-flow: column nowrap;
-  padding: 0.2em 0;
+  padding: 0 1rem;
   text-align: left;
   align-items: start;
   justify-content: baseline;
-  margin: auto;
-  width: 100%;
-  z-index: 0;
-  height: max-content;
-  background-image: linear-gradient(62deg, #294662 0%, #382a46 100%);
+  margin: 0 auto;
+  width: 100vw;
+  z-index: -1;
+  height: auto;
 }
 
 h1.intro {
@@ -346,7 +352,7 @@ div.wrapper {
   margin: 0px;;
 }
 
-footer {
+#footer-first {
   font-family: 'Montserrat', sans-serif, monospace;
   font-weight: 500;
   font-size: .5rem;
@@ -357,4 +363,65 @@ footer {
   text-align: start;
   left: 1em;
   position: relative;
+}
+
+div.wrapper-end {
+  min-height: fit-content;
+  display: flex;
+  flex-flow: row wrap;  
+  height: 100vh;
+  position: relative;
+  align-content: center;
+  justify-items: stretch;
+  justify-content: start;
+  margin-top: 0rem;
+  margin-right: -1rem;
+  overflow: scroll;
+  width: auto;
+  background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%) ;
+  border: 2px solid var(--main-blue, blue);
+  padding: 0.2vh;
+}
+
+footer#end {
+  display: inline-flex;
+  position:static;
+  bottom: -1rem;
+  margin-top: 0;
+  left: 0;
+  flex-flow: row wrap;
+  margin-left: -0.1vw;
+  align-items: center;
+  justify-content:flex-start;
+  width: 100vw;
+  z-index: 1;
+  min-height: 2rem;
+  height: 3rem;
+  float: left;
+  background-color: var(--secondary-color);
+}
+
+h3.farewell{
+  font-family: 'Montserrat', sans-serif, monospace;
+  font-size: 1.5em;
+  display: inline;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem 18%;
+  width: 100vw;
+  min-width: 75%;
+  max-width: 90%;
+  z-index: 1;
+  line-height: 16vh;
+  margin: 0 auto;
+  color: var(--main-white, white);
+  text-transform: capitalize;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
