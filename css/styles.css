@@ -86,7 +86,6 @@ video {
   font: inherit;
   vertical-align: baseline
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -101,21 +100,17 @@ nav,
 section {
   display: block
 }
-
 body {
   line-height: 1
 }
-
 ol,
 ul {
   list-style: none
 }
-
 blockquote,
 q {
   quotes: none
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -123,41 +118,35 @@ q:after {
   content: '';
   content: none
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0
 }
-
 /* Universal variables */
 :root {
   --secondary-color: hsla(229, 27%, 60%, 1);
   --main-white: hsla(17, 41%, 97%, 0.8);
   --main-blue: hsla(204, 89%, 82%, 1)
 }
-
 html {
   font-size: 22px
 }
-
 body {
   font-size: 22px;
   background-image: linear-gradient(62deg, #294662 0%, #382a46 100%)
 }
-
 hr {
   border: 0.3vh solid chocolate
 }
-
 #top-menu {
   display: block;
   z-index: 2;
   position: fixed
 }
-
 #navbar {
   display: flex;
   position: fixed;
+  top: 0;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: right;
@@ -168,7 +157,6 @@ hr {
   background-color: var(--secondary-color);
   border: 2px solid rgb(30, 200, 194)
 }
-
 ul.navbar {
   list-style: none;
   width: 100%;
@@ -179,11 +167,10 @@ ul.navbar {
   margin: 0 auto;
   padding-right: 1em
 }
-
 li a,
 a.body {
   text-decoration: overline;
-  font-family: 'Montserrat', sans-serif, monospace;
+  font-family: 'Montserrat',sans-serif,monospace;
   font-weight: 500;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -192,19 +179,16 @@ a.body {
   cursor: pointer;
   transition-property: color
 }
-
 li a:link,
 a.body:link {
   transition-property: color;
   color: rgb(153, 36, 164)
 }
-
 li a:visited,
 a.body:visited {
   color: rgb(163, 8, 65);
   text-decoration: dashed
 }
-
 li a:hover,
 a.body:hover {
   font-weight: 550;
@@ -213,13 +197,11 @@ a.body:hover {
   opacity: 90%;
   transition: all 200ms step-end 200ms
 }
-
 li a:active,
 a.body:active {
   color: var(--main-blue, rgb(15, 95, 224));
   transition: all 300ms ease-in-out
 }
-
 main {
   position: static;
   display: inline;
@@ -233,9 +215,8 @@ main {
   z-index: -1;
   height: auto
 }
-
 h1.intro {
-  font-family: 'Montserrat', sans-serif, monospace;
+  font-family: 'Montserrat',sans-serif,monospace;
   font-size: 2.5em;
   display: inline;
   letter-spacing: 1.3px;
@@ -251,7 +232,6 @@ h1.intro {
   color: var(--main-white, white);
   text-transform: capitalize
 }
-
 section.banner {
   position: static;
   min-height: fit-content;
@@ -261,22 +241,20 @@ section.banner {
   justify-items: stretch;
   justify-content: center;
   margin-top: 14rem;
-  overflow:hidden;
+  overflow: hidden;
   width: auto;
   background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%);
   border: 2px solid var(--main-blue, blue);
   padding: 0.2vh
 }
-
-aside.join,
+aside.join p,
 #quote {
   display: block;
   position: relative;
-  margin-top: 6em
+  margin-top: 6em;
 }
-
-aside.join h2.join {
-  font-family: 'Roboto', sans-serif;
+aside.join, h2.join, p.join{
+  font-family: 'Roboto',sans-serif;
   font-size: 2rem;
   font-weight: 450;
   font-style: italic;
@@ -285,9 +263,9 @@ aside.join h2.join {
   letter-spacing: 1.2px;
   color: hsla(204, 89%, 82%, 1)
 }
-
-aside.join p, #quote {
-  font-family: 'Montserrat', sans-serif, monospace;
+aside.join 
+ {
+  font-family: 'Montserrat',sans-serif,monospace;
   font-size: 1rem;
   font-style: normal;
   width: 100%;
@@ -297,13 +275,13 @@ aside.join p, #quote {
   line-height: 1.2;
   font-weight: 400;
   position: relative;
-  display: inline-block;
+  display: block;
   color: rgb(238, 241, 243)
 }
-
 #footer-first {
-  font-family: 'Montserrat', sans-serif, monospace;
+  font-family: 'Montserrat',sans-serif,monospace;
   font-weight: 500;
+  width: max-content;
   font-size: .5rem;
   letter-spacing: 1px;
   padding: 0 10px;
@@ -312,11 +290,9 @@ aside.join p, #quote {
   text-align: start;
   position: relative
 }
-
 a#inner.body {
   text-decoration: underline
 }
-
 /* Gallery */
 .gallery {
   display: flex;
@@ -324,18 +300,15 @@ a#inner.body {
   justify-content: space-evenly;
   margin-top: 20px
 }
-
 .gallery-item {
   margin: 20px
 }
-
 .gallery-item .thumbnail {
   width: 15rem;
   border: 2px solid GhostWhite;
   border-radius: 15px;
   aspect-ratio: 35/30
 }
-
 section.images {
   display: inline-flex;
   position: relative;
@@ -344,7 +317,6 @@ section.images {
   padding: 0;
   margin-top: 2rem
 }
-
 div.wrapper {
   width: 100%;
   height: auto;
@@ -352,7 +324,6 @@ div.wrapper {
   position: static;
   margin: 0px
 }
-
 div.wrapper-end {
   min-height: fit-content;
   display: flex;
@@ -362,7 +333,7 @@ div.wrapper-end {
   align-content: center;
   justify-items: stretch;
   justify-content: space-evenly;
-  margin-top: 0rem;
+  margin-bottom: 0rem;
   margin-right: -1rem;
   overflow: scroll;
   width: auto;
@@ -370,7 +341,6 @@ div.wrapper-end {
   border: 2px solid var(--main-blue, blue);
   padding: 0.2vh
 }
-
 footer#end {
   display: inline-flex;
   position: static;
@@ -388,9 +358,8 @@ footer#end {
   float: left;
   background-color: var(--secondary-color)
 }
-
 h3.farewell {
-  font-family: 'Montserrat', sans-serif, monospace;
+  font-family: 'Montserrat',sans-serif,monospace;
   font-size: 1.5em;
   display: inline;
   letter-spacing: 1.3px;
@@ -406,7 +375,6 @@ h3.farewell {
   color: var(--main-white, white);
   text-transform: capitalize
 }
-
 @media only screen and (max-width: 480px) {
   section.banner h1.intro {
     width: 100%;
@@ -417,45 +385,50 @@ h3.farewell {
     padding: 0.5em;
     font-weight: 800;
     text-align: center;
-    display: inline;
+    display: inline
   }
 }
-
 @media only screen and (min-width: 320px) and (max-width: 480px),
 (orientation: portrait) {
   .gallery-item .thumbnail {
     width: 95%
   }
 }
-
 @media only screen and (max-resolution: 150dpi) and (max-width: 480px) {
   p {
     font-size: 20px
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-  aside.join,
-  #quote {
-    display: block;
+  aside.join {
+    display: flex;
     float: left;
-    max-width: 49%;
-    position: relative;
+    max-width: 54%;
+    margin-bottom: 0px;
     margin-top: 6em;
     padding-left: 1em;
     margin-right: 1em;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center
   }
-
-  .gallery {
-    display: flex;
+  aside.gallery {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 20px;
     display: block;
     float: right;
-    max-width: 45%;
+    width: 40%;
     position: relative;
-    margin: 1rem auto;
+    margin-right: 0rem;
+    display: table;
+    float: left;
+    max-width: 49%;
+    position: relative;
+    margin-top: 6em;
+    padding-left: 1em;
+    margin-right: 1em
   }
 }
