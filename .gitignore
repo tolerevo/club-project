@@ -4,3 +4,6 @@
 .vscode/tasks.json
 .vscode/settings.json
 css/stylesmodi.css
+.DS_Store
+.vscode/settings.json
+settings.json
