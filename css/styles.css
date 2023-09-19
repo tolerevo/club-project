@@ -263,7 +263,6 @@ section.banner {
   justify-items: stretch;
   justify-content: center;
   margin-top: 14rem;
-  ;
   overflow: scroll;
   width: auto;
   background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%);
@@ -313,13 +312,18 @@ a#inner.body {
 
 /* Gallery */
 
-.gallery {
+.first-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 20px;
 }
-
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
 .gallery-item {
   margin: 20px;
 }
@@ -327,18 +331,8 @@ a#inner.body {
 .gallery-item .thumbnail {
   width: 15rem;
   border: 2px solid GhostWhite;
-  border-radius: 15px;
   aspect-ratio: 35/30;
-}
 
-
-section.images {
-  display: inline-flex;
-  position: relative;
-  width: fit-content;
-  height: auto;
-  padding: 0;
-  margin-top: 2rem;
 }
 
 div.wrapper {
@@ -347,7 +341,7 @@ div.wrapper {
   display: block;
   position: static;
   margin: 0px;
-  ;
+  
 }
 
 #footer-first {
@@ -367,16 +361,17 @@ div.wrapper-end {
   min-height: fit-content;
   display: flex;
   flex-flow: row wrap;
-  height: 100vh;
   position: relative;
   align-content: center;
   justify-items: stretch;
   justify-content: space-evenly;
   margin-top: 0rem;
   margin-right: -1rem;
-  overflow: scroll;
-  width: auto;
+  overflow:hidden;
+  width: 100vw;
   background-image: linear-gradient(62deg, #a08035 0%, #c94b38 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 2px solid var(--main-blue, blue);
   padding: 0.2vh;
 }
@@ -456,4 +451,24 @@ h3.farewell {
     text-align: left;
   }
 
+  aside.join hr {
+    display:none;
+  }
+
+  .gallery {
+    /* margin: auto; */
+    margin: 0 auto;
+    float: right;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  div.wrapper-end {
+    /* display: flex; */
+    /* flex-flow: row wrap; */
+    display: block;
+    flex-flow: column wrap;
+    /* justify-items: stretch; */
+    justify-items: center;
+  }
 }
